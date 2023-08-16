@@ -20,7 +20,7 @@ public class PersonService {
         return personRepository.save(p);
     }
 
-    public Person getPerson(@PathVariable Integer id){
+    public Person getPerson(Integer id){
         if(personRepository.findById(id).isPresent())
             return personRepository.findById(id).get();
         return null;
@@ -40,6 +40,6 @@ public class PersonService {
 
     public void deletePerson(Integer id){
         personRepository.deleteById(id);
-
     }
+
 }
